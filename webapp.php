@@ -34,6 +34,15 @@ echo '<div style="position: absolute; top: 16%; left: 24%;">';
 echo '<p style="display: inline; font-size: 18px; margin: 0;"><b>2022-23</b></p><br>';
 echo '</div>';
 
+// mobile / webapp button
+echo '<div style="position: absolute; top: 5%; left: 24%;">';
+echo '<form action="http://guesstheplayernhl.42web.io/mobile.php">
+    <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+      Mobile Site
+    </button>
+  </form>';
+echo '</div>';
+
 
 // Set star emoji location
 echo '<div style="position: absolute; top: 12%; right: 24%;">';
@@ -115,10 +124,6 @@ if (!empty($players)) {
 
     }
     
-    
-
-
-
 // Display the player's information
 echo '<span style="font-size:50px;">&#129349;</span>';
 echo '<div id="position"><p style="display: inline; font-size: 30px; margin: 0;"><b>' . $selectedPlayer['position'] . '</b></p></div>';
@@ -370,15 +375,11 @@ function submitForm(event) {
             document.getElementById("secondSymbol").innerHTML = '&#10060;'; // Change the symbol to X
         } else if (counter === 2) {
             document.getElementById("thirdSymbol").innerHTML = '&#10060;'; // Change the symbol to X
-        }
+        } 
 
         // Increment the counter
         counter++;
 
-        // Reset the counter if it reaches 3
-        if (counter === 3) {
-            counter = 0;
-        }
     }
 }
 

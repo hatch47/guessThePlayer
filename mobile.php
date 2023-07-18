@@ -15,7 +15,6 @@
 <!-- Include the Select2 JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
-
 <?php
 include "DBConnection.php"; // include the database connection file
 
@@ -34,6 +33,14 @@ echo '<div style="position: absolute; top: 32%; left: 24%;">';
 echo '<p style="display: inline; font-size: 18px; margin: 0;"><b>2022-23</b></p><br>';
 echo '</div>';
 
+// mobile / webapp button
+echo '<div style="position: absolute; top: 5%; left: 24%;">';
+echo '<form action="http://guesstheplayernhl.42web.io/webapp.php">
+    <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+      Desktop Site
+    </button>
+  </form>';
+echo '</div>';
 
 // Set star emoji location
 echo '<div style="position: absolute; top: 33%; right: 28%;">';
@@ -374,11 +381,6 @@ function submitForm(event) {
 
         // Increment the counter
         counter++;
-
-        // Reset the counter if it reaches 3
-        if (counter === 3) {
-            counter = 0;
-        }
     }
 }
 
