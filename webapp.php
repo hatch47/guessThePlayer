@@ -84,7 +84,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $dropdown .= '</select> ';
 // $dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event)">';
-$dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event);">';
+$dropdown .= '<input type="submit" name="submit" value="Guess Player" style="background-color: Chartreuse;" onclick="submitForm(event);">';
 $dropdown .= '</form>';
 
 $dropdown .= '<script>';
@@ -160,9 +160,9 @@ echo '</tr>';
 // Button and result for Team and Shots
 // echo '<tr><td style="text-align: center;"><b> &#11088;25</b></tr></td>';
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract25Points(); toggleVisibility(\'team\');">Team</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract25Points(); toggleVisibility(\'team\');">Team</button></td>';
 echo '<td><div id="team" style="display: none;"><b>' . $selectedPlayer['team'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'shots\')">Shots</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'shots\')">Shots</button></td>';
 echo '<td><div id="shots" style="display: none;"><b>' . $selectedPlayer['shots'] . '</b></div></td>';
 echo '</tr>';
 
@@ -170,7 +170,7 @@ echo '</tr>';
 echo '<tr>';
 echo '<td style="text-align: center;"><b> &#11088;10</b></td>';
 echo '<td style="width: 175px;"><div id="team" style="display: none;"></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'gp\')">Games Played</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'gp\')">Games Played</button></td>';
 echo '<td><div id="gp" style="display: none;"><b>' . $selectedPlayer['gp'] . '</b></div></td>';
 echo '</tr>';
 
@@ -178,57 +178,57 @@ echo '</tr>';
 echo '<tr><td></tr></td>';
 // echo '<tr><td style="text-align: center;"><b> &#11088;10</b></tr></td>';
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract10Points(); toggleVisibility(\'goals\')">Goals</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract10Points(); toggleVisibility(\'goals\')">Goals</button></td>';
 echo '<td style="width: 175px;"><div id="goals" style="display: none;"><b>' . $selectedPlayer['goals'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'hits\')">Hits</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'hits\')">Hits</button></td>';
 echo '<td><div id="hits" style="display: none;"><b>' . $selectedPlayer['hits'] . '</b></div></td>';
 echo '</tr>';
 
 // Button and result for Assists and Blocked Shots
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract10Points(); toggleVisibility(\'totalassists\')">Assists</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract10Points(); toggleVisibility(\'totalassists\')">Assists</button></td>';
 echo '<td><div id="totalassists" style="display: none;"><b>' . $selectedPlayer['totalassists'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'shotsblocked\')">Shots Blocked</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'shotsblocked\')">Shots Blocked</button></td>';
 echo '<td><div id="shotsblocked" style="display: none;"><b>' . $selectedPlayer['shotsblocked'] . '</b></div></td>';
 echo '</tr>';
 
 // Button and result for Points and Penalties in Minutes
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract10Points(); toggleVisibility(\'totalpoints\')">Points</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract10Points(); toggleVisibility(\'totalpoints\')">Points</button></td>';
 echo '<td><div id="totalpoints" style="display: none;"><b>' . $selectedPlayer['totalpoints'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'pim\')">Penalties in Minutes</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'pim\')">Penalties in Minutes</button></td>';
 echo '<td><div id="pim" style="display: none;"><b>' . $selectedPlayer['pim'] . '</b></div></td>';
 echo '</tr>';
 
 // Button and result for Birth Country and Minor Penalties
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract10Points(); toggleVisibility(\'birthcountry\')">Birth Country</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract10Points(); toggleVisibility(\'birthcountry\')">Birth Country</button></td>';
 echo '<td><div id="birthcountry" style="display: none;"><b>' . $selectedPlayer['birthcountry'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'minorpenalties\')">Minor Penalties</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'minorpenalties\')">Minor Penalties</button></td>';
 echo '<td><div id="minorpenalties" style="display: none;"><b>' . $selectedPlayer['minorpenalties'] . '</b></div></td>';
 echo '</tr>';
 
 // Button and result for Draft Team and Major Penalties
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract10Points(); toggleVisibility(\'draftteam\')">Draft Team</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract10Points(); toggleVisibility(\'draftteam\')">Draft Team</button></td>';
 echo '<td><div id="draftteam" style="display: none;"><b>' . $selectedPlayer['draftteam'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'majorpenalties\')">Major Penalties</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'majorpenalties\')">Major Penalties</button></td>';
 echo '<td><div id="majorpenalties" style="display: none;"><b>' . $selectedPlayer['majorpenalties'] . '</b></div></td>';
 echo '</tr>';
 
 // Penalties Drawn and Button for Date of Birth
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract10Points(); toggleVisibility(\'penaltiesdrawn\')">Penalties Drawn</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract10Points(); toggleVisibility(\'penaltiesdrawn\')">Penalties Drawn</button></td>';
 echo '<td><div id="penaltiesdrawn" style="display: none;"><b>' . $selectedPlayer['penaltiesdrawn'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'dateofbirth\')">Date of Birth</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'dateofbirth\')">Date of Birth</button></td>';
 echo '<td><div id="dateofbirth" style="display: none;"><b>' . $selectedPlayer['dateofbirth'] . '</b></div></td>';
 echo '</tr>';
 
 // button for Draft Round Draft Position
 echo '<tr>';
-echo '<td><button style="width: 150px;" onclick="subtract10Points(); toggleVisibility(\'draftround\')">Draft Round</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract10Points(); toggleVisibility(\'draftround\')">Draft Round</button></td>';
 echo '<td><div id="draftround" style="display: none;"><b>' . $selectedPlayer['draftround'] . '</b></div></td>';
-echo '<td><button style="width: 150px;" onclick="subtract5Points(); toggleVisibility(\'overalldraftposition\')">Draft Position</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract5Points(); toggleVisibility(\'overalldraftposition\')">Draft Position</button></td>';
 echo '<td><div id="overalldraftposition" style="display: none;"><b>' . $selectedPlayer['overalldraftposition'] . '</b></div></td>';
 echo '</tr>';
 
@@ -241,7 +241,7 @@ echo '</tr>';
 // Empty and // Button and result for Give Up, Show Player
 echo '<tr>';
 echo '<td style="text-align: center;"></td>';
-echo '<td><button style="width: 150px;" onclick="subtract100Points(); toggleVisibility(\'player\')">Give Up, Show Player</button></td>';
+echo '<td><button style="width: 150px; background-color: PaleTurquoise;" onclick="subtract100Points(); toggleVisibility(\'player\')">Give Up, Show Player</button></td>';
 echo '</tr>';
 echo '<tr>';
 echo '<td style="text-align: center;"></td>';
@@ -262,7 +262,7 @@ echo '</tr>';
 echo '<tr>';
 echo '<td style="text-align: center;"></td>';
 echo '<td><form method="post">
-<input type="submit" name="refresh" value="New Player">
+<input type="submit" name="refresh" value="New Player" style="background-color: lightsalmon;">
 </form></td>';
 echo '</tr>';
 echo '<tr>';
