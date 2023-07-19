@@ -155,9 +155,9 @@ echo '<table>';
 
 // 25 point and 5 point
 echo '<tr>';
-echo '<td style="text-align: center;"><b> &#11088;25</b></td>';
+echo '<td style="text-align: center; vertical-align: bottom;"><b> &#11088;25</b></td>';
 echo '<td style="width: 175px;"><div id="" style="display: none;"></div></td>';
-echo '<td style="text-align: center;"><b> &#11088;5</b></td>';
+echo '<td style="text-align: center; vertical-align: bottom;"><b> &#11088;5</b></td>';
 echo '<td style="width: 175px;"><div id="" style="display: none;"></div></td>';
 echo '<td style="text-align: center; color: white;">................</td>';
 echo '</tr>';
@@ -237,10 +237,10 @@ echo '<td><button style="width: 150px; height: 50px; background-color: PaleTurqu
 echo '<td><div id="overalldraftposition" style="display: none;"><b>' . $selectedPlayer['overalldraftposition'] . '</b></div></td>';
 echo '</tr>';
 
-// Empty and 105 point button
+// Empty and 100 point button
 echo '<tr>';
 echo '<td style="text-align: center;"></td>';
-echo '<td style="text-align: center;"><b> &#11088;100</b></td>';
+echo '<td style="text-align: center; vertical-align: bottom;"><b> &#11088;100</b></td>';
 echo '</tr>';
 
 // Empty and // Button and result for Give Up, Show Player
