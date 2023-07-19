@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="styles.css">
 <script src="script.js"></script>
 <link rel="icon" href="Logo.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=0.75">
 <title>Guess the Player</title>
 </head>
 <body>
@@ -21,20 +22,21 @@ include "DBConnection.php"; // include the database connection file
 $points = "100";
 
 // Set rules location
-echo '<div style="position: absolute; top: 35%; left: 21%;">';
-echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#129351; = &#11088; 75 </b></p><br>';
-echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#129352; = &#11088; 50 </b></p><br>';
-echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#129353; = &#11088; 1 </b></p><br>';
-echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#128078; = &#11088; 0 </b></p><br>';
+// echo '<div style="position: absolute; bottom: 25%; left: 45%;">';
+echo '<div style="position: absolute; top: 65%; left: 13%;">';
+echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;75 = &#129351;</b></p><span style="color: white;">.....</span>';
+echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;50 = &#129352;</b></p><span style="color: white;">.....</span>';
+echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;1 = &#129353;</b></p><span style="color: white;">.....</span>';
+echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;0 = &#128078;</b></p>';
 echo '</div>';
 
 // Set year location
-echo '<div style="position: absolute; top: 32%; left: 24%;">';
+echo '<div style="position: absolute; top: 10%; left: 8%;">';
 echo '<p style="display: inline; font-size: 18px; margin: 0;"><b>2022-23</b></p><br>';
 echo '</div>';
 
-// mobile / webapp button
-echo '<div style="position: absolute; top: 5%; left: 24%;">';
+// mobile / webapp button. local: http://localhost/guesstheplayer/webapp.php http://localhost/guesstheplayer/mobile.php
+echo '<div style="position: absolute; top: 5%; left: 8%;">';
 echo '<form action="http://guesstheplayernhl.42web.io/webapp.php">
     <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       Desktop Site
@@ -43,31 +45,31 @@ echo '<form action="http://guesstheplayernhl.42web.io/webapp.php">
 echo '</div>';
 
 // Set star emoji location
-echo '<div style="position: absolute; top: 33%; right: 28%;">';
-echo '<span style="font-size: 50px;">&#11088;</span>';
+echo '<div style="position: absolute; top: 23%; right: 53%;">';
+echo '<span style="font-size: 35px;">&#11088;</span>';
 echo '</div>';
 
 // Set points location
-echo '<div style="position: absolute; top: 33%; right: 23%;">';
-echo '<span style="font-size: 50px;"><p id="points" style="display: inline; font-size: 30px; margin: 0;"><b>' . $points . '</b></p></span>';
+echo '<div style="position: absolute; top: 23%; right: 44%;">';
+echo '<span style="font-size: 35px;"><p id="points" style="display: inline; font-size: 30px; margin: 0;"><b>' . $points . '</b></p></span>';
 echo '</div>';
 
 // Set symbols and locations
-echo '<div style="position: absolute; top: 37%; right: 18%;">';
+echo '<div style="position: absolute; top: 15%; right: 4%;">';
 if (isset($_POST['submit']) && !$isCorrect) {
-    echo '<span id="firstSymbol" style="font-size:50px;">&#10060;</span>';
+    echo '<span id="firstSymbol" style="font-size:30px;">&#10060;</span>';
 } else {
-    echo '<span id="firstSymbol" style="font-size:50px;">&#127954;</span>';
+    echo '<span id="firstSymbol" style="font-size:30px;">&#127954;</span>';
 }
 if (isset($_POST['submit']) && !$isCorrect) {
-    echo '<span id="secondSymbol" style="font-size:50px;">&#10060;</span>';
+    echo '<span id="secondSymbol" style="font-size:30px;">&#10060;</span>';
 } else {
-    echo '<span id="secondSymbol" style="font-size:50px;">&#127954;</span>';
+    echo '<span id="secondSymbol" style="font-size:30px;">&#127954;</span>';
 }
 if (isset($_POST['submit']) && !$isCorrect) {
-    echo '<span id="thirdSymbol" style="font-size:50px;">&#10060;</span>';
+    echo '<span id="thirdSymbol" style="font-size:30px;">&#10060;</span>';
 } else {
-    echo '<span id="thirdSymbol" style="font-size:50px;">&#127954;</span>';
+    echo '<span id="thirdSymbol" style="font-size:30px;">&#127954;</span>';
 }
 echo '</div>';
 echo '<div class="container">';
@@ -108,15 +110,15 @@ if (!empty($players)) {
     
 
     if ($selectedPlayer['position'] === 'goalie' || $selectedPlayer['goals'] > 29 || $selectedPlayer['totalpoints'] > 80 || $selectedPlayer['avtoi'] > 21.5) {
-        echo '<div style="position: absolute; top: 41%; right: 21%; display: inline-flex; background-color: darkgreen; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        echo '<div style="position: absolute; top: 5%; right: 8%; display: inline-flex; background-color: darkgreen; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <span style="margin: auto;">Difficulty: Easy</span>
       </div>';
     } elseif ($selectedPlayer['goals'] > 14 || $selectedPlayer['totalpoints'] > 29 || $selectedPlayer['avtoi'] > 19) {
-        echo '<div style="position: absolute; top: 41%; right: 20%; display: inline-flex; background-color: darkorange; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        echo '<div style="position: absolute; top: 5%; right: 6%; display: inline-flex; background-color: darkorange; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <span style="margin: auto;">Difficulty: Medium</span>
       </div>';
     } else {
-        echo '<div style="position: absolute; top: 41%; right: 21%; display: inline-flex; background-color: darkred; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        echo '<div style="position: absolute; top: 5%; right: 8%; display: inline-flex; background-color: darkred; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <span style="margin: auto;">Difficulty: Hard</span>
       </div>';
 
@@ -157,6 +159,7 @@ echo '<td style="text-align: center;"><b> &#11088;25</b></td>';
 echo '<td style="width: 175px;"><div id="" style="display: none;"></div></td>';
 echo '<td style="text-align: center;"><b> &#11088;5</b></td>';
 echo '<td style="width: 175px;"><div id="" style="display: none;"></div></td>';
+echo '<td style="text-align: center; color: white;">................</td>';
 echo '</tr>';
 
 // Button and result for Team and Shots
@@ -356,9 +359,9 @@ function submitForm(event) {
             }
 
             // Set the positioning properties
-            medalSymbol.style.position = "fixed";  // or "absolute" if you want it relative to a parent element
-            medalSymbol.style.top = "43%";       // adjust the top position value
-            medalSymbol.style.right = "20%";      // adjust the left position value
+            medalSymbol.style.position = "absolute";  // or "absolute" if you want it relative to a parent element
+            medalSymbol.style.top = "40%";       // adjust the top position value
+            medalSymbol.style.right = "37%";      // adjust the left position value
 
             // Append the additional symbol to the document
             document.body.appendChild(medalSymbol);

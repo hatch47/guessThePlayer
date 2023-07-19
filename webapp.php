@@ -34,7 +34,7 @@ echo '<div style="position: absolute; top: 16%; left: 24%;">';
 echo '<p style="display: inline; font-size: 18px; margin: 0;"><b>2022-23</b></p><br>';
 echo '</div>';
 
-// mobile / webapp button
+// mobile / webapp button. local: http://localhost/guesstheplayer/webapp.php http://localhost/guesstheplayer/mobile.php
 echo '<div style="position: absolute; top: 5%; left: 24%;">';
 echo '<form action="http://guesstheplayernhl.42web.io/mobile.php">
     <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
@@ -45,12 +45,12 @@ echo '</div>';
 
 
 // Set star emoji location
-echo '<div style="position: absolute; top: 12%; right: 24%;">';
+echo '<div style="position: absolute; top: 12%; right: 27%;">';
 echo '<span style="font-size: 50px;">&#11088;</span>';
 echo '</div>';
 
 // Set points location
-echo '<div style="position: absolute; top: 13%; right: 21%;">';
+echo '<div style="position: absolute; top: 13%; right: 24%;">';
 echo '<span style="font-size: 50px;"><p id="points" style="display: inline; font-size: 30px; margin: 0;"><b>' . $points . '</b></p></span>';
 echo '</div>';
 
@@ -110,15 +110,15 @@ if (!empty($players)) {
     
 
     if ($selectedPlayer['position'] === 'goalie' || $selectedPlayer['goals'] > 29 || $selectedPlayer['totalpoints'] > 80 || $selectedPlayer['avtoi'] > 21.5) {
-        echo '<div style="position: absolute; top: 32%; right: 21%; display: inline-flex; background-color: darkgreen; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        echo '<div style="position: absolute; top: 5%; right: 25%; display: inline-flex; background-color: darkgreen; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <span style="margin: auto;">Difficulty: Easy</span>
       </div>';
     } elseif ($selectedPlayer['goals'] > 14 || $selectedPlayer['totalpoints'] > 29 || $selectedPlayer['avtoi'] > 19) {
-        echo '<div style="position: absolute; top: 32%; right: 20%; display: inline-flex; background-color: darkorange; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        echo '<div style="position: absolute; top: 5%; right: 25%; display: inline-flex; background-color: darkorange; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <span style="margin: auto;">Difficulty: Medium</span>
       </div>';
     } else {
-        echo '<div style="position: absolute; top: 32%; right: 21%; display: inline-flex; background-color: darkred; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        echo '<div style="position: absolute; top: 5%; right: 25%; display: inline-flex; background-color: darkred; color: white; padding: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <span style="margin: auto;">Difficulty: Hard</span>
       </div>';
 
@@ -354,9 +354,9 @@ function submitForm(event) {
             }
 
             // Set the positioning properties
-            medalSymbol.style.position = "fixed";  // or "absolute" if you want it relative to a parent element
-            medalSymbol.style.top = "36%";       // adjust the top position value
-            medalSymbol.style.right = "20%";      // adjust the left position value
+            medalSymbol.style.position = "absolute";  // or "absolute" if you want it relative to a parent element
+            medalSymbol.style.top = "50%";       // adjust the top position value
+            medalSymbol.style.right = "45%";      // adjust the left position value
 
             // Append the additional symbol to the document
             document.body.appendChild(medalSymbol);

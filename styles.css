@@ -115,3 +115,51 @@
     width: 50%;
   }
   
+  @media (max-width: 900px) {
+    /* CSS rules specific to smaller screens */
+    /* Adjust font sizes for better readability */
+    body {
+      font-size: 16px;
+      overflow-x: hidden; /* Hide horizontal overflow */
+    }
+  
+    /* Modify the layout to fit smaller screens */
+    .container {
+      width: 80%; /* Set the width to 80% of the screen width */
+      margin: 0 auto; /* Center the container horizontally */
+      box-sizing: border-box; /* Include padding in the total width */
+    }
+  
+    /* Adjust the width and height of specific elements */
+    .header {
+      width: 100%;
+      height: 60px;
+    }
+  
+    .logo {
+      max-width: 100px;
+      width: 100%; /* Make the logo occupy the full available width */
+      height: auto; /* Maintain the aspect ratio */
+    }
+  
+    /* Make images responsive and scale to fit */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Modify the navigation for mobile devices */
+    .navigation {
+      display: none; /* Hide the navigation initially */
+    }
+  
+    .hamburger {
+      display: block; /* Show the hamburger menu icon */
+    }
+  
+    /* Adjust the positioning of elements */
+    .footer {
+      position: static;
+    }
+  }
+  
