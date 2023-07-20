@@ -23,7 +23,7 @@ $points = "100";
 
 // Set rules location
 // echo '<div style="position: absolute; bottom: 25%; left: 45%;">';
-echo '<div style="position: absolute; bottom: 2%; left: 13%;">';
+echo '<div style="position: absolute; top: 0%; left: 13%;">';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;75 = &#129351;</b></p><span style="color: white;">.....</span>';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;50 = &#129352;</b></p><span style="color: white;">.....</span>';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;1 = &#129353;</b></p><span style="color: white;">.....</span>';
@@ -46,25 +46,25 @@ echo '</div>';
 
 // android / iphone
 echo '<div style="position: absolute; top: 13%; left: 8%;">';
-echo '<form action="http://guesstheplayernhl.42web.io/iphone.php">
+echo '<form action="http://guesstheplayernhl.42web.io/mobile.php">
     <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-      iPhone
+      Android
     </button>
   </form>';
 echo '</div>';
 
 // Set star emoji location
-echo '<div style="position: absolute; top: 23%; right: 53%;">';
+echo '<div style="position: absolute; top: 30%; right: 52%;">';
 echo '<span style="font-size: 35px;">&#11088;</span>';
 echo '</div>';
 
 // Set points location
-echo '<div style="position: absolute; top: 23%; right: 44%;">';
+echo '<div style="position: absolute; top: 30%; right: 43%;">';
 echo '<span style="font-size: 35px;"><p id="points" style="display: inline; font-size: 30px; margin: 0;"><b>' . $points . '</b></p></span>';
 echo '</div>';
 
 // Set symbols and locations
-echo '<div style="position: absolute; top: 15%; right: 4%;">';
+echo '<div style="position: absolute; top: 18%; right: 41%;">';
 if (isset($_POST['submit']) && !$isCorrect) {
     echo '<span id="firstSymbol" style="font-size:30px;">&#10060;</span>';
 } else {
@@ -93,7 +93,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $dropdown .= '</select> ';
 // $dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event)">';
-$dropdown .= '<input type="submit" name="submit" value="Guess Player" style="background-color: Chartreuse;" onclick="submitForm(event);">';
+$dropdown .= '<input type="submit" name="submit" value="Guess Player" style="background-color: green;" onclick="submitForm(event);">';
 $dropdown .= '</form>';
 
 $dropdown .= '<script>';
@@ -369,8 +369,8 @@ function submitForm(event) {
 
             // Set the positioning properties
             medalSymbol.style.position = "absolute";  // or "absolute" if you want it relative to a parent element
-            medalSymbol.style.top = "40%";       // adjust the top position value
-            medalSymbol.style.right = "37%";      // adjust the left position value
+            medalSymbol.style.top = "52%";       // adjust the top position value
+            medalSymbol.style.right = "38%";      // adjust the left position value
 
             // Append the additional symbol to the document
             document.body.appendChild(medalSymbol);
