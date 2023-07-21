@@ -23,7 +23,7 @@ $points = "100";
 
 // Set rules location
 echo '<div style="position: absolute; top: 19%; left: 21%;">';
-echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#129351; = &#11088; 75 </b></p><br>';
+echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#129351; = &#11088; 70 </b></p><br>';
 echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#129352; = &#11088; 50 </b></p><br>';
 echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#129353; = &#11088; 1 </b></p><br>';
 echo '<p style="display: inline; font-size: 30px; margin: 0;"><b>&#128078; = &#11088; 0 </b></p><br>';
@@ -68,10 +68,12 @@ if (isset($_POST['submit']) && !$isCorrect) {
 }
 if (isset($_POST['submit']) && !$isCorrect) {
     echo '<span id="thirdSymbol" style="font-size:50px;">&#10060;</span>';
+    echo '<span id="thumbsDown" style="font-size:100px; position: absolute; top: 50%; right: 45%; ">&#128078;</span>';
 } else {
-    echo '<span id="thirdSymbol" style="font-size:50px;">&#127954;</span>';
+    echo '<span id="thirdSymbol" style="font-size:50px;">&#127954;</span></div>';
+    echo '<div style="position: absolute; top: 50%; right: 45%;"><span id="thumbsDown" style="font-size:100px;"></span></div>';
 }
-echo '</div>';
+// echo '</div>';
 echo '<div class="container">';
 
 $query = "SELECT player FROM playerinfo23 WHERE gp > 15 ORDER BY PLAYER";
@@ -84,9 +86,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $dropdown .= '</select> ';
 // $dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event)">';
-$dropdown .= '<input type="submit" name="submit" value="Guess Player" style="background-color: Chartreuse;" onclick="submitForm(event);">';
+$dropdown .= '<input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: Chartreuse; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';
 $dropdown .= '</form>';
-
 $dropdown .= '<script>';
 $dropdown .= '$(".select2").select2();'; // Initialize the select2 plugin on the select element
 $dropdown .= '</script>';
@@ -344,14 +345,14 @@ function submitForm(event) {
                 // alert(endP);
 
             // Check the points value and assign the appropriate medal symbol
-            if (endP > 74) {
+            if (endP > 69) {
             medalSymbol.innerHTML = '&#129351;'; // Gold medal symbol
             } else if (endP > 49) {
             medalSymbol.innerHTML = '&#129352;'; // Silver medal symbol
             } else if (endP > 0) {
             medalSymbol.innerHTML = '&#129353;'; // Bronze medal symbol
             } else {
-            medalSymbol.innerHTML = '&#128078;'; // Sad face symbol
+            medalSymbol.innerHTML = '&#128078;'; // Thumbs Down symbol
             }
 
             // Set the positioning properties
@@ -376,8 +377,8 @@ function submitForm(event) {
             document.getElementById("secondSymbol").innerHTML = '&#10060;'; // Change the symbol to X
         } else if (counter === 2) {
             document.getElementById("thirdSymbol").innerHTML = '&#10060;'; // Change the symbol to X
+            document.getElementById("thumbsDown").innerHTML = '&#128078;'; // Change the symbol to thumbs down
         } 
-
         // Increment the counter
         counter++;
 

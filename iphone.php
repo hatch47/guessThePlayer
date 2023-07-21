@@ -24,7 +24,7 @@ $points = "100";
 // Set rules location
 // echo '<div style="position: absolute; bottom: 25%; left: 45%;">';
 echo '<div style="position: absolute; top: 0%; left: 13%;">';
-echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;75 = &#129351;</b></p><span style="color: white;">.....</span>';
+echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;70 = &#129351;</b></p><span style="color: white;">.....</span>';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;50 = &#129352;</b></p><span style="color: white;">.....</span>';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;1 = &#129353;</b></p><span style="color: white;">.....</span>';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;0 = &#128078;</b></p>';
@@ -86,10 +86,12 @@ if (isset($_POST['submit']) && !$isCorrect) {
 }
 if (isset($_POST['submit']) && !$isCorrect) {
     echo '<span id="thirdSymbol" style="font-size:30px;">&#10060;</span>';
+    echo '<span id="thumbsDown" style="font-size:100px; position: absolute; top: 52%; right: 38%; ">&#128078;</span>';
 } else {
-    echo '<span id="thirdSymbol" style="font-size:30px;">&#127954;</span>';
+    echo '<span id="thirdSymbol" style="font-size:30px;">&#127954;</span></div>';
+    echo '<div style="position: absolute; top: 52%; right: 38%;"><span id="thumbsDown" style="font-size:100px;"></span></div>';
 }
-echo '</div>';
+// echo '</div>';
 echo '<div class="container">';
 
 $query = "SELECT player FROM playerinfo23 WHERE gp > 15 ORDER BY PLAYER";
@@ -102,9 +104,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $dropdown .= '</select> ';
 // $dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event)">';
-$dropdown .= '<input type="submit" name="submit" value="Guess Player" style="background-color: green;" onclick="submitForm(event);">';
+$dropdown .= '<input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: Chartreuse; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';
 $dropdown .= '</form>';
-
 $dropdown .= '<script>';
 $dropdown .= '$(".select2").select2();'; // Initialize the select2 plugin on the select element
 $dropdown .= '</script>';
@@ -366,14 +367,14 @@ function submitForm(event) {
                 // alert(endP);
 
             // Check the points value and assign the appropriate medal symbol
-            if (endP > 74) {
+            if (endP > 69) {
             medalSymbol.innerHTML = '&#129351;'; // Gold medal symbol
             } else if (endP > 49) {
             medalSymbol.innerHTML = '&#129352;'; // Silver medal symbol
             } else if (endP > 0) {
             medalSymbol.innerHTML = '&#129353;'; // Bronze medal symbol
             } else {
-            medalSymbol.innerHTML = '&#128078;'; // Sad face symbol
+            medalSymbol.innerHTML = '&#128078;'; // Thumbs Down symbol
             }
 
             // Set the positioning properties
@@ -398,6 +399,7 @@ function submitForm(event) {
             document.getElementById("secondSymbol").innerHTML = '&#10060;'; // Change the symbol to X
         } else if (counter === 2) {
             document.getElementById("thirdSymbol").innerHTML = '&#10060;'; // Change the symbol to X
+            document.getElementById("thumbsDown").innerHTML = '&#128078;'; // Change the symbol to thumbs down
         }
 
         // Increment the counter
