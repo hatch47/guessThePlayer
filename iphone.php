@@ -104,7 +104,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $dropdown .= '</select> ';
 // $dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event)">';
-$dropdown .= '<input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: Chartreuse; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';
+$dropdown .= '<input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: green; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';
 $dropdown .= '</form>';
 $dropdown .= '<script>';
 $dropdown .= '$(".select2").select2();'; // Initialize the select2 plugin on the select element
