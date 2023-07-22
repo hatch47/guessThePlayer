@@ -366,11 +366,13 @@ function submitForm(event) {
                 // alert(endP);
 
             // Check the points value and assign the appropriate medal symbol
-            if (endP > 69) {
+            // Points are 5 higher in this logic than on the display. this is because the 5 points for the guess button
+            // happens at the same time as the submission, so it doesnt apply the subtraction when checking which medal to display
+            if (endP > 74) {
             medalSymbol.innerHTML = '&#129351;'; // Gold medal symbol
-            } else if (endP > 49) {
+            } else if (endP > 54) {
             medalSymbol.innerHTML = '&#129352;'; // Silver medal symbol
-            } else if (endP > 0) {
+            } else if (endP > 6) {
             medalSymbol.innerHTML = '&#129353;'; // Bronze medal symbol
             } else {
             medalSymbol.innerHTML = '&#128078;'; // Thumbs Down symbol
