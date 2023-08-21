@@ -23,7 +23,7 @@ $points = "100";
 
 // Set rules location
 // echo '<div style="position: absolute; bottom: 25%; left: 45%;">';
-echo '<div style="position: absolute; bottom: 2%; left: 13%;">';
+echo '<div style="position: absolute; top: 0%; left: 13%;">';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;70 = &#129351;</b></p><span style="color: white;">.....</span>';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;50 = &#129352;</b></p><span style="color: white;">.....</span>';
 echo '<p style="display: inline; font-size: 20px; margin: 0;"><b>&#11088;1 = &#129353;</b></p><span style="color: white;">.....</span>';
@@ -63,12 +63,12 @@ echo '<form action="http://guesstheplayernhl.42web.io/home.php">
 echo '</div>';
 
 // Set star emoji location
-echo '<div style="position: absolute; top: 23%; right: 53%;">';
+echo '<div style="position: absolute; top: 30%; right: 53%;">';
 echo '<span style="font-size: 35px;">&#11088;</span>';
 echo '</div>';
 
 // Set points location
-echo '<div style="position: absolute; top: 23%; right: 44%;">';
+echo '<div style="position: absolute; top: 30%; right: 44%;">';
 echo '<span style="font-size: 35px;"><p id="points" style="display: inline; font-size: 30px; margin: 0;"><b>' . $points . '</b></p></span>';
 echo '</div>';
 
@@ -104,7 +104,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $dropdown .= '</select> ';
 // $dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event)">';
-$dropdown .= '<input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: Chartreuse; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';$dropdown .= '</form>';
+$dropdown .= '<div style="position: absolute; top: 25%; right: 38%;"><input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: Chartreuse; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';$dropdown .= '</div></form>';
 $dropdown .= '<script>';
 $dropdown .= '$(".select2").select2();'; // Initialize the select2 plugin on the select element
 $dropdown .= '</script>';
