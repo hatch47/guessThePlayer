@@ -63,12 +63,12 @@ echo '<form action="http://guesstheplayernhl.42web.io/home.php">
 echo '</div>';
 
 // Set star emoji location
-echo '<div style="position: absolute; top: 30%; right: 52%;">';
+echo '<div style="position: absolute; top: 30%; right: 51%;">';
 echo '<span style="font-size: 35px;">&#11088;</span>';
 echo '</div>';
 
 // Set points location
-echo '<div style="position: absolute; top: 30%; right: 43%;">';
+echo '<div style="position: absolute; top: 30%; right: 42%;">';
 echo '<span style="font-size: 35px;"><p id="points" style="display: inline; font-size: 30px; margin: 0;"><b>' . $points . '</b></p></span>';
 echo '</div>';
 
@@ -104,7 +104,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $dropdown .= '</select> ';
 // $dropdown .= '<input type="submit" name="submit" value="Guess Player" onclick="submitForm(event)">';
-$dropdown .= '<input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: green; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';
+// $dropdown .= '<input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: green; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';
+$dropdown .= '</form><br><input type="submit" name="submit" value="Guess Player &#11088;5" style="background-color: green; font-weight: bold;" onclick="submitForm(event); subtract5Points();">';$dropdown .= '';
 $dropdown .= '</form>';
 $dropdown .= '<script>';
 $dropdown .= '$(".select2").select2();'; // Initialize the select2 plugin on the select element
