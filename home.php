@@ -15,7 +15,7 @@
 <h3>Choose Device</h3>
 
 <!-- Device Link  -->
-<form action="http://guesstheplayernhl.42web.io/pc.php">
+<form action="pc.php">
     <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       <b>PC / Desktop</b>
     </button>
@@ -23,7 +23,7 @@
 <br>
 
 <!-- Device Link  -->
-<form action="http://guesstheplayernhl.42web.io/android.php">
+<form action="android.php">
     <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       <b>Android</b>
     </button>
@@ -31,7 +31,7 @@
 <br>
 
 <!-- Device Link  -->
-<form action="http://guesstheplayernhl.42web.io/iphone.php">
+<form action="iphone.php">
     <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       <b>iPhone</b>
     </button>

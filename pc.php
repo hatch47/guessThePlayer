@@ -36,7 +36,7 @@ echo '</div>';
 
 // mobile / webapp button. local: http://localhost/guesstheplayer/webapp.php http://localhost/guesstheplayer/home.php
 echo '<div style="position: absolute; top: 5%; left: 24%;">';
-echo '<form action="http://guesstheplayernhl.42web.io/home.php">
+echo '<form action="home.php">
     <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       Change Device
     </button>

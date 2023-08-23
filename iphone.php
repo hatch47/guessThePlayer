@@ -35,27 +35,9 @@ echo '<div style="position: absolute; top: 10%; left: 8%;">';
 echo '<p style="display: inline; font-size: 18px; margin: 0;"><b>2022-23</b></p><br>';
 echo '</div>';
 
-// // mobile / webapp button. local: http://localhost/guesstheplayer/webapp.php http://localhost/guesstheplayer/mobile.php
-// echo '<div style="position: absolute; top: 5%; left: 8%;">';
-// echo '<form action="http://guesstheplayernhl.42web.io/webapp.php">
-//     <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-//       Desktop Site
-//     </button>
-//   </form>';
-// echo '</div>';
-
-// // android / iphone
-// echo '<div style="position: absolute; top: 13%; left: 8%;">';
-// echo '<form action="http://guesstheplayernhl.42web.io/mobile.php">
-//     <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-//       Android
-//     </button>
-//   </form>';
-// echo '</div>';
-
 // mobile / webapp button. local: http://localhost/guesstheplayer/webapp.php http://localhost/guesstheplayer/home.php
 echo '<div style="position: absolute; top: 5%; left: 8%;">';
-echo '<form action="http://guesstheplayernhl.42web.io/home.php">
+echo '<form action="home.php">
     <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       Change Device
     </button>
