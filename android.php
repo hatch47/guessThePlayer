@@ -124,10 +124,6 @@ if (!empty($players)) {
       </div>';
 
     }
-    
-    
-
-
 
 // Display the player's information
 echo '<span style="font-size:50px;">&#129349;</span>';

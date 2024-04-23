@@ -126,10 +126,6 @@ if (!empty($players)) {
 
     }
     
-    
-
-
-
 // Display the player's information
 echo '<span style="font-size:50px;">&#129349;</span>';
 echo '<div id="position"><p style="display: inline; font-size: 30px; margin: 0;"><b>' . $selectedPlayer['position'] . '</b></p></div>';
