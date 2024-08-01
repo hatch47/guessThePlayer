@@ -12,19 +12,10 @@
 <div class="container">
 
 <span style="font-size:50px;">&#129349;</span>
-<br><br>
-<!-- Device Link  -->
-<form action="home24.php">
-    <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-      <b>Switch to 2023-24 Season Game (Latest Season)</b>
-    </button>
-</form>
-<br><br><br>
-
 <h3>Choose Device</h3>
 
 <!-- Device Link  -->
-<form action="pc.php">
+<form action="pc24.php">
     <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       <b>PC / Desktop</b>
     </button>
@@ -32,7 +23,7 @@
 <br>
 
 <!-- Device Link  -->
-<form action="android.php">
+<form action="android24.php">
     <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       <b>Android</b>
     </button>
@@ -40,11 +31,20 @@
 <br>
 
 <!-- Device Link  -->
-<form action="iphone.php">
+<form action="iphone24.php">
     <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
       <b>iPhone</b>
     </button>
 </form>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- Device Link  -->
+<form action="home.php">
+    <button type="submit" style="background-color: PaleTurquoise; color: black; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+      <b>Switch to 2022-23 Season Game (Older Season)</b>
+    </button>
+</form>
+<br>
 
 <?php
 ?>
