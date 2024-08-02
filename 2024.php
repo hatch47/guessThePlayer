@@ -67,59 +67,11 @@ $players = mysqli_fetch_all($result, MYSQLI_ASSOC);
 if (!empty($players)) {
     // Select a random player from the array
     $selectedPlayer = $players[array_rand($players)];
-    
-    
-// Top table
-echo '<table>';
-echo '<div style="width: 450px; overflow: off;">';
-
-// // Year
-// echo '<tr>';
-// echo '<td style="width: 175px; text-align: center; font-size: 18px;"><b></b></td>';
-// echo '<td style="width: 175px; text-align: center; font-size: 18px;"><b>2023-24 Season</b></td>';
-// echo '</tr>';
-
-echo '<tr>';
-echo '<td style="width: 175px;">';
-if (isset($_POST['submit']) && !$isCorrect) {
-    echo '<span id="firstSymbol" style="font-size:35px;">&#10060;</span>';
-    echo '<span id="secondSymbol" style="font-size:35px;">&#10060;</span>';
-    echo '<span id="thirdSymbol" style="font-size:35px;">&#10060;</span>';
-    echo '<span id="thumbsDown" style="font-size:35px;">&#128078;</span>';
-} else {
-    echo '<span id="firstSymbol" style="font-size:35px;">&#127954;</span>';
-    echo '<span id="secondSymbol" style="font-size:35px;">&#127954;</span>';
-    echo '<span id="thirdSymbol" style="font-size:35px;">&#127954;</span>';
-    echo '<span id="thumbsDown" style="font-size:35px;"></span>';
-}
-echo '</td>';
-
-// echo '<td style="text-align: center; font-size: 18px;"><b></b></td>';
-
-// Empty td
-echo '<td style="width: 175px;">';
-echo '</td>';
-
-// Star emoji
-echo '<td style="width: 175px; text-align: center;">';
-echo '<div">';
-echo '<span style="font-size: 35px;">&#11088;</span>';
-echo '</div>';
-
-// Points count
-echo '<div"">';
-echo '<span style="font-size: 35px;"><p id="points" style="display: inline; font-size: 35px; margin: 0;"><b>' . $points . '</b></p></span>';
-echo '</div>';
-echo '</td>';
-
-
-echo '</tr>';
-echo '</div>';
-echo '</table>';
 
 echo '<div style="width: 450px; height: 1000px; overflow: off;">';
 echo '<table>';
 
+// Empty cells and Season
 echo '<td></td><td style="width: 175px; text-align: center; font-size: 18px;"><b>2023-24 Season</b></td>';
 
 echo '<tr>';
@@ -159,14 +111,45 @@ if ($selectedPlayer['position'] === 'goalie' || $selectedPlayer['goals'] > 29 ||
 echo '</td>';
 echo '</tr>';
 
-// Dropdown for player selection
+
 echo '<tr>';
-echo '<td></td>';
+
+//  Symbols and Medals
+echo '<td style="width: 175px;">';
+if (isset($_POST['submit']) && !$isCorrect) {
+    echo '<span id="firstSymbol" style="font-size:35px;">&#10060;</span>';
+    echo '<span id="secondSymbol" style="font-size:35px;">&#10060;</span>';
+    echo '<span id="thirdSymbol" style="font-size:35px;">&#10060;</span>';
+    echo '<span id="thumbsDown" style="font-size:35px;">&#128078;</span>';
+} else {
+    echo '<span id="firstSymbol" style="font-size:35px;">&#127954;</span>';
+    echo '<span id="secondSymbol" style="font-size:35px;">&#127954;</span>';
+    echo '<span id="thirdSymbol" style="font-size:35px;">&#127954;</span>';
+    echo '<div style="position: absolute; top: 2%; left: 50%; transform: translateX(-50%); z-index: 9999;">
+    <span id="thumbsDown" style="font-size: 200px;"></span></div>';
+}
+echo '</td>';
+
+// Dropdown for player selection
+// echo '<td></td>';
 echo '<td>';
 echo $dropdown;
 echo '</td>';
-echo '</tr>';
 
+
+// Star emoji
+echo '<td style="width: 175px; text-align: center;">';
+echo '<div">';
+echo '<span style="font-size: 35px;">&#11088;</span>';
+echo '</div>';
+
+// Points count
+echo '<div"">';
+echo '<span style="font-size: 35px;"><p id="points" style="display: inline; font-size: 35px; margin: 0;"><b>' . $points . '</b></p></span>';
+echo '</div>';
+echo '</td>';
+
+echo '</tr>';
 
 // 25 point and 5 point
 echo '<tr>';
@@ -371,7 +354,7 @@ function submitForm(event) {
             // Display different medal based on points
             // Create a new element for the medal symbol
             var medalSymbol = document.createElement("span");
-            medalSymbol.style.fontSize = "300px";
+            medalSymbol.style.fontSize = "200px";
 
             // Get the current points to be used for medal
             var pointsElement = document.getElementById("points");
@@ -394,9 +377,10 @@ function submitForm(event) {
             }
 
             // Set the positioning properties
-            medalSymbol.style.position = "absolute";  // or "absolute" if you want it relative to a parent element
+            medalSymbol.style.position = "absolute";
             medalSymbol.style.top = "2%";       // adjust the top position value
-            medalSymbol.style.right = "35%";      // adjust the left position value
+            medalSymbol.style.left = "50%";     // center horizontally
+            medalSymbol.style.transform = "translateX(-50%)";  // adjust horizontal centering
 
             // Append the additional symbol to the document
             document.body.appendChild(medalSymbol);
