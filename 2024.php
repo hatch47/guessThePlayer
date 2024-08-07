@@ -125,7 +125,7 @@ if (isset($_POST['submit']) && !$isCorrect) {
     echo '<span id="firstSymbol" style="font-size:35px;">&#127954;</span>';
     echo '<span id="secondSymbol" style="font-size:35px;">&#127954;</span>';
     echo '<span id="thirdSymbol" style="font-size:35px;">&#127954;</span>';
-    echo '<div style="position: absolute; top: 2%; left: 50%; transform: translateX(-50%); z-index: 9999;">
+    echo '<div style="position: absolute; top: 2%; left: 51.5%; transform: translateX(-50%); z-index: 9999;">
     <span id="thumbsDown" style="font-size: 200px;"></span></div>';
 }
 echo '</td>';
@@ -379,7 +379,7 @@ function submitForm(event) {
             // Set the positioning properties
             medalSymbol.style.position = "absolute";
             medalSymbol.style.top = "2%";       // adjust the top position value
-            medalSymbol.style.left = "50%";     // center horizontally
+            medalSymbol.style.left = "51.5%";     // center horizontally
             medalSymbol.style.transform = "translateX(-50%)";  // adjust horizontal centering
 
             // Append the additional symbol to the document
