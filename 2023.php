@@ -389,7 +389,6 @@ function submitForm(event) {
         // Increment the counter
         counter++;
 
-
     } else {
         // alert("Incorrect.");
 
@@ -444,7 +443,6 @@ function subtract100Points() {
 }
 
 </script>
-
 
 </div>
 </body>
